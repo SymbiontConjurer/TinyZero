@@ -1,3 +1,6 @@
+**/models
+**/dataset
+
 **/*.pt
 **/checkpoints
 **/wget-log
