@@ -20,3 +20,4 @@ pip install vllm==0.6.3 ray
 pip install -e .
 pip install flash-attn --no-build-isolation
 pip install wandb IPython matplotlib
+pip install "huggingface_hub[hf_transfer]"
