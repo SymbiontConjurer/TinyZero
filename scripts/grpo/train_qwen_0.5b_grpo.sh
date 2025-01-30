@@ -10,7 +10,7 @@ python3 -m verl.trainer.main_ppo \
     data.val_batch_size=1312 \
     data.max_prompt_length=256 \
     data.max_response_length=1024 \
-    actor_rollout_ref.model.path=../hf-cache/Qwen/Qwen2.5-3B \
+    actor_rollout_ref.model.path=models/Qwen/Qwen2.5-0.5B \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.actor.ppo_mini_batch_size=128 \
     actor_rollout_ref.actor.ppo_micro_batch_size=8 \
@@ -25,7 +25,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.logger=['console','wandb'] \
     +trainer.val_before_train=False \
     trainer.default_hdfs_dir=null \
-    trainer.n_gpus_per_node=8 \
+    trainer.n_gpus_per_node=1 \
     trainer.nnodes=1 \
     trainer.save_freq=-1 \
     trainer.test_freq=10 \
