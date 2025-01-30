@@ -134,6 +134,12 @@ def main_task(config):
 
     tokenizer = hf_tokenizer(local_path)
 
+    if config.get("tokenizer_extend_vocab_n", 0) > 0:
+        tokenizer.add_tokens(
+            [f"<reasoning_dsl_{i}>" for i in range(config.tokenizer_extend_vocab_n)]
+        )
+        # TODO: call model.resize_token_embeddings(len(tokenizer)) - but where?
+
     # define worker classes
     if config.actor_rollout_ref.actor.strategy == "fsdp":
         assert config.actor_rollout_ref.actor.strategy == config.critic.strategy
