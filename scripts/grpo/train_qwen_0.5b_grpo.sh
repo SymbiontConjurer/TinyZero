@@ -30,5 +30,5 @@ python3 -m verl.trainer.main_ppo \
     trainer.save_freq=-1 \
     trainer.test_freq=10 \
     trainer.project_name=TinyZero \
-    trainer.experiment_name=countdown-qwen2.5-1.5b-grpo \
+    trainer.experiment_name=qwen2.5-0.5b-grpo \
     trainer.total_epochs=15 2>&1 | tee verl_demo.log
