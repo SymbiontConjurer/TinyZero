@@ -6,7 +6,7 @@ python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
     data.train_files=dataset/train.parquet \
     data.val_files=dataset/test.parquet \
-    data.train_batch_size=1024 \
+    data.train_batch_size=512 \
     data.val_batch_size=1312 \
     data.max_prompt_length=256 \
     data.max_response_length=1024 \
