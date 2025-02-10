@@ -8,7 +8,7 @@ python3 -m verl.trainer.main_ppo \
     data.val_files=dataset/test.parquet \
     data.train_batch_size=1024 \
     data.val_batch_size=1312 \
-    data.max_prompt_length=512 \
+    data.max_prompt_length=256 \
     data.max_response_length=1024 \
     actor_rollout_ref.model.path=Qwen/Qwen2.5-3B \
     actor_rollout_ref.actor.optim.lr=1e-6 \
